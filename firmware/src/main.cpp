@@ -1,27 +1,25 @@
 #include <Arduino.h>
-#include "OneButton.h"
 
-#define pinBotao 2
-#define pinLED 1
+#define LED 1
+#define Button1 23
 
 void setup() {
-  while (!Serial)
-  {
-    /* code */
-  }
 
-  Serial.begin(9600);
-  pinMode(pinLED, OUTPUT);
+  pinMode(LED, OUTPUT);
+  pinMode(Button1, INPUT);
   
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  Serial.println("Hello World");
+  int ButtonState = digitalRead(Button1);
 
-  digitalWrite(pinLED, HIGH);
-  delay(3000);
+  if(ButtonState == HIGH)
+  {
+    digitalWrite(LED,HIGH);
+  }
+  else
+  {
+    digitalWrite(LED, LOW);
+  }
 
-  digitalWrite(pinLED, LOW);
-  delay(3000);
 }
