@@ -3,11 +3,11 @@
 #include <BleKeyboard.h>
 #include "configs.h"
 
-BleKeyboard bleKeyboard("Streamdeck DIY", "Alvaro Viebrantz", 50);
+BleKeyboard bleKeyboard("Streamdeck DIY", "Alvaro Viebrantz", 100);
 
 OneButton button1(23, true);
 OneButton button2(22, true);
-OneButton button3(13, true);
+OneButton button3(21, true);
 OneButton button4(4, true);
 OneButton button5(14, true);
 OneButton button6(12, true);
